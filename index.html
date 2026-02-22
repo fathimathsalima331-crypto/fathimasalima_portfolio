@@ -1254,6 +1254,184 @@ animation:floatLogo 6s ease-in-out infinite;
 
 /* RESPONSIVE */
 
+/* ================= ABOUT ME FULL RESPONSIVE ================= */
+
+.about-modern{
+padding:100px 8%;
+}
+
+/* Layout */
+
+.about-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+}
+
+/* Image Section */
+
+.about-image-box{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+min-width:280px;
+}
+
+.about-img{
+width:280px;
+max-width:90%;
+animation:floatImage 6s ease-in-out infinite;
+}
+
+.about-glow{
+position:absolute;
+width:350px;
+height:350px;
+background:radial-gradient(circle,#6c5ce755,transparent 70%);
+border-radius:50%;
+animation:pulseGlow 4s infinite;
+}
+
+/* Text Section */
+
+.about-text{
+flex:1;
+max-width:600px;
+}
+
+.about-text h3{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.about-text p{
+line-height:1.8;
+color:#555;
+}
+
+/* Cards */
+
+.about-cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:30px;
+}
+
+/* Individual Card */
+
+.card{
+background:rgba(255,255,255,.8);
+backdrop-filter:blur(20px);
+
+padding:30px;
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+text-align:center;
+
+height:160px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 60px rgba(108,92,231,.25);
+}
+
+.card h4{
+color:#6c5ce7;
+font-size:1.6rem;
+}
+
+/* Animations */
+
+@keyframes floatImage{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+@keyframes pulseGlow{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+.about-wrapper{
+flex-direction:column;
+text-align:center;
+}
+
+.about-cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+.about-text{
+max-width:100%;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.about-modern{
+padding:70px 5%;
+}
+
+.about-text h3{
+font-size:1.6rem;
+}
+
+.about-cards{
+grid-template-columns:1fr;
+}
+
+.card{
+width:100%;
+}
+
+.about-img{
+width:220px;
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+.about-text h3{
+font-size:1.4rem;
+}
+
+.about-text p{
+font-size:14px;
+}
+
+.card{
+height:auto;
+padding:25px;
+}
+
+}
 @media(max-width:900px){
 .about-wrapper{
 flex-direction:column;
@@ -1295,6 +1473,270 @@ justify-content:center;
 .delay2{
     animation-delay:6s;
 }
+
+/* ================= ULTRA MASTER RESPONSIVE WEBSITE ================= */
+
+/* ===== GLOBAL ===== */
+
+html,body{
+overflow-x:hidden;
+width:100%;
+}
+
+/* ================= NAVBAR RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+nav{
+width:96%;
+left:2%;
+padding:15px 30px;
+}
+
+nav ul{
+gap:18px;
+}
+
+}
+
+/* Tablet Navbar */
+
+@media(max-width:900px){
+
+nav{
+flex-direction:column;
+gap:15px;
+border-radius:25px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+/* Mobile Navbar */
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+nav{
+padding:15px;
+}
+
+nav div{
+font-size:20px;
+}
+
+}
+
+/* ================= HERO SECTION ================= */
+
+@media(max-width:1024px){
+
+.hero-box{
+padding:50px;
+}
+
+.hero-box h1{
+font-size:50px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-box{
+padding:35px 25px;
+}
+
+.hero-box h1{
+font-size:36px;
+}
+
+.typing{
+font-size:18px;
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+.hero-box h1{
+font-size:28px;
+}
+
+.btn{
+padding:12px 22px;
+font-size:14px;
+}
+
+}
+
+/* ================= ABOUT SECTION ================= */
+
+@media(max-width:1024px){
+
+.about-wrapper{
+flex-direction:column;
+text-align:center;
+}
+
+.about-cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.about-cards{
+grid-template-columns:1fr;
+}
+
+.about-text h3{
+font-size:22px;
+}
+
+}
+
+/* ================= SKILLS ================= */
+
+@media(max-width:1024px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.skill-card{
+width:100%;
+}
+
+}
+
+/* ================= PROJECTS ================= */
+
+@media(max-width:1024px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.project-card img{
+height:200px;
+}
+
+}
+
+/* ================= CONTACT ================= */
+
+@media(max-width:1024px){
+
+.contact-unique-card{
+padding:70px 40px;
+}
+
+}
+
+@media(max-width:768px){
+
+.contact-unique-card{
+padding:50px 25px;
+border-radius:30px;
+}
+
+.contact-unique-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/* ================= FOOTER ================= */
+
+@media(max-width:768px){
+
+footer{
+padding:30px 20px;
+font-size:14px;
+}
+
+}
+
+/* ================= VERY SMALL DEVICES ================= */
+
+@media(max-width:400px){
+
+.hero-box{
+padding:25px 15px;
+}
+
+.title{
+font-size:24px;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+/* ================= IMAGE RESPONSIVE ================= */
+
+img{
+max-width:100%;
+height:auto;
+}
+
+/* ================= TOUCH DEVICE FIX ================= */
+
+@media(hover:none){
+
+.project-card:hover img{
+transform:none;
+}
+
+.skill-card:hover{
+transform:none;
+}
+
+}
+
+/* ================= MENU MOBILE FIX ================= */
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+}
+
+/* ================= SPACING FIX ================= */
+
+section{
+padding-left:6%;
+padding-right:6%;
+}
+
 /* ===== PROJECT TECH FLOAT BAR ===== */
 /* ===== UNIQUE FLOATING CONTACT STYLE ===== */
 
@@ -2040,12 +2482,12 @@ into interactive web applications with clean design and smooth performance.
 <img src="self-portrait-forest-scaled.jpg">
 <div class="project-overlay">
 <h3>Travel</h3>
-<a class="btn" href="https://fathimathsalima331-crypto.github.io/destintation/" target="_blank">Live</a>
+<a class="btn" href=" https://fathimathsalima331-crypto.github.io/travel/" target="_blank">Live</a>
 </div>
 </div>
 
 <div class="project-card">
-<img src="tictoe.avif">
+<img src="ti.png">
 <div class="project-overlay">
 <h3>TicTacToe Game</h3>
 <a class="btn" href="https://fathimathsalima331-crypto.github.io/tictoe-game2/" target="_blank">Live</a>
@@ -2053,7 +2495,7 @@ into interactive web applications with clean design and smooth performance.
 </div>
 
 <div class="project-card">
-<img src="calc.jpg">
+<img src="calcu.png">
 <div class="project-overlay">
 <h3>Calculator</h3>
 <a class="btn" href="https://fathimathsalima331-crypto.github.io/calculator/" target="_blank">Live</a>
@@ -2069,7 +2511,7 @@ into interactive web applications with clean design and smooth performance.
 </div>
 
 <div class="project-card">
-<img src="urban.png">
+<img src="mono.webp">
 <div class="project-overlay">
 <h3>Urbane </h3>
 <a class="btn" href="https://fathimathsalima331-crypto.github.io/urbanic/" target="_blank">Live</a>
